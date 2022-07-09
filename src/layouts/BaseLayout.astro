@@ -1,0 +1,31 @@
+---
+import "../global.css"
+import Navbar from '../components/Navbar.jsx';
+const {title} = Astro.props;
+---
+
+<html lang="en" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+    <body data-theme="luxury">
+      <Navbar />
+      <slot />
+    </body>
+
+  <script>
+    const toggleThemeBtn = document.getElementById('toggle-btn');
+    let theme = localStorage.getItem('theme') || 'luxury';
+    document.body.setAttribute('data-theme', theme);
+    toggleThemeBtn.toggleAttribute(theme === 'cupcake' ? 'checked' : undefined);
+    const toggleTheme = document.getElementById('toggle-btn');
+    toggleTheme.addEventListener('change',() => {
+      theme = theme === "cupcake" ? "luxury" : "cupcake";
+      toggleThemeBtn.toggleAttribute('checked');
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    });
+  </script>
+</html>
