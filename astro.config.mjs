@@ -5,5 +5,9 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), tailwind()]
+  integrations: [preact(), tailwind()],
+  site: 'https://trinhgiaphuc.github.io',
+
+  // Resolve path
+  base: '/my-portfolio',
 });

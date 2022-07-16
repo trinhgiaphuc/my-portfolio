@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { content } = Astro.props;
+---
+
+<BaseLayout>
+  <header style={`background-image:url(${content.img})`} class="p-10 flex items-center justify-center bg-no-repeat lg:bg-cover bg-zinc-400 min-h-[45vh] bg-center text-black flex-col">
+  </header>
+  <main class="prose lg:prose-2xl mx-auto">
+    <div class="bg-neutral">
+      <div class="py-20 mb-20 flex items-center justify-center flex-col">
+          {content.tags.map(t => <span class="uppercase font-medium text-yellow-400">#{t}</span>)}
+        <h4 class="font-medium ml-4 text-white leading-6">{content.description}</h4>
+      </div>
+    </div>
+    <div class=""><slot /></div>
+  </main>
+  <footer class="tac mt6">
+    <a href="/projects">
+      <button>View More</button>
+    </a>
+  </footer>
+</BaseLayout>
+

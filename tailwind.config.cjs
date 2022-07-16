@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+      backgroundImage: {
+        'tienglong-web': "url('/tienglong-web.jpg')",
+      }
+    },
 	},
-	plugins: [require('daisyui')],
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }

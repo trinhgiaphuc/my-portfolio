@@ -1,9 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero';
+import SkillSection from '../components/SkillSection';
+import ProjectSection from '../components/ProjectSection';
+import Contact from '../components/Contact';
 ---
 
 <BaseLayout title="TGP">
-  <h1 className="h-96">Hello Worlds</h1>
-</BaseLayout>
+  <Hero />
+    <main class="bg-[#0f1729] flex flex-col items-center justify-center gap-10 pb-10">
+      <div class="container mx-auto grid">
+        <SkillSection />
+      </div>
 
+      <div class="container mx-auto grid">
+        <ProjectSection />
+      </div>
+
+      <div class="container mx-auto grid">
+        <h1 class="text-2xl text-center text-bold text-white p-4">Find me on</h1>
+        <Contact />
+      </div>
+    </main>
+</BaseLayout>
 
