@@ -1,7 +1,7 @@
 export const PROJECTS = [
   { name: 'TiengLong Web Application', description: 'Website of TiengLong project', tools: ['React.js', 'Next.js,', 'TailwindCSS', 'Vercel'], site: 'https://tienglong.vercel.app', sourceCode: 'https://github.com/trinhgiaphuc/tienglong' },
   { name: 'TiengLong Native Application', description: 'Native application of TiengLong project for desktop', tools: ['React.js', 'Electron.js', 'TailwindCSS', 'Node.js', 'Typescript'], site: '', sourceCode: 'https://github.com/trinhgiaphuc/tienglong-desktop' },
-  { name: 'TiengLong Mobile Application', description: 'Cross-platform mobile application of TiengLong project for all operation system', tools: ['React Native', 'Expo', 'Redux toolkit', 'Typescript'], site: '', sourceCode: 'https://github.com/trinhgiaphuc/tienglong_mobile' },
+  { name: 'TiengLong Mobile Application', description: 'Cross-platform mobile application of TiengLong project for all operation system', tools: ['React Native', 'Expo', 'Redux toolkit', 'Typescript'], site: '', sourceCode: 'https://github.com/trinhgiaphuc/tienglong-mobile' },
   { name: 'TiengLong Server', description: 'Server for all Front-End applications of TiengLong project', tools: ['Next.js', 'REST API', 'Firebase/Firebase Admin', 'Redis-om'], site: '', sourceCode: 'https://github.com/trinhgiaphuc/tienglong' },
 ];
 
